@@ -1,2 +1,6 @@
 <app-add-user (userCreated)="onUserCreated($event)"></app-add-user>
-<app-users-list></app-users-list>
+<!-- <p style="background-color: white">{{ updatedUsersList }}</p> -->
+<app-users-list
+  (deletedUserOutput)="onUserDelete($event)"
+  [usersList]="usersList"
+></app-users-list>
