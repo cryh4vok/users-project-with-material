@@ -1,0 +1,18 @@
+<div
+  style="
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+  "
+>
+  <mat-selection-list #selectedUser>
+    <mat-list-item
+      role="listitem"
+      *ngFor="let user of usersList"
+      (click)="onClick(user)"
+      >{{ user.name }} ({{ user.age }})</mat-list-item
+    >
+  </mat-selection-list>
+
+  <p>{{ selectedUser.selectedOptions.selected.value }}</p>
+</div>
